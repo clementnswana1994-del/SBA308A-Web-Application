@@ -7,7 +7,7 @@ async function start() {
     const data = await response.json();
     createBreedList(data.message);
   } catch (e) {
-    console.log("There was a problem fetching the breed list.");
+    //console.log("There was a problem fetching the breed list.");
   }
 }
 
@@ -16,7 +16,7 @@ start();
 function createBreedList(breedList) {
   document.getElementById("breed").innerHTML = `
   <select onchange="loadByBreed(this.value)">
-        <option>Choose a dog breed</option>
+        <option>Choose a Dog Breed</option>
         ${Object.keys(breedList)
           .map(function (breed) {
             return `<option>${breed}</option>`;
@@ -27,12 +27,13 @@ function createBreedList(breedList) {
 }
 
 async function loadByBreed(breed) {
-  if (breed != "Choose a dog breed") {
+  if (breed != "Choose a Dog Breed") {
     const response = await fetch(`https://dog.ceo/api/breed/${breed}/images`);
     const data = await response.json();
     createSlideshow(data.message);
   }
 }
+
 
 function createSlideshow(images) {
   let currentPosition = 0;
