@@ -7,7 +7,7 @@ async function start() {
     const data = await response.json();
     createBreedList(data.message);
   } catch (e) {
-    //console.log("There was a problem fetching the breed list.");
+    console.log("There was a problem fetching the breed list.");
   }
 }
 
@@ -33,6 +33,7 @@ async function loadByBreed(breed) {
     createSlideshow(data.message);
   }
 }
+
 
 
 function createSlideshow(images) {
