@@ -40,7 +40,7 @@ function createSlideshow(images) {
   clearInterval(timer);
   clearTimeout(deleteFirstPhotoDelay);
 
-  if (images.length > 1) {
+  if (images.length >= 1) {
     document.getElementById("slideshow").innerHTML = `
   <div class="slide" style="background-image: url('${images[0]}')"></div>
   <div class="slide" style="background-image: url('${images[1]}')"></div>
