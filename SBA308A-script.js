@@ -36,7 +36,7 @@ async function loadByBreed(breed) {
 
 
 function createSlideshow(images) {
-  let currentPosition = ;
+  let currentPosition = 0;
   clearInterval(timer);
   clearTimeout(deleteFirstPhotoDelay);
 
